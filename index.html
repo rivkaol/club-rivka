@@ -130,6 +130,42 @@
             border-radius: 20px;
         }
 
+        /* --- Premium Header Styling --- */
+        .premium-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .premium-header-main {
+            display: block;
+            font-size: 2.5rem;
+            color: var(--primary-green);
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .premium-header-sub {
+            display: inline-block;
+            font-size: 1.5rem;
+            color: var(--accent-gold);
+            font-weight: 400;
+            position: relative;
+            padding: 0 10px;
+        }
+
+        /* Decorative lines for premium feel */
+        .premium-header-sub::before,
+        .premium-header-sub::after {
+            content: '';
+            display: inline-block;
+            width: 40px;
+            height: 1px;
+            background-color: var(--accent-gold);
+            vertical-align: middle;
+            margin: 0 15px;
+            opacity: 0.7;
+        }
+
         /* --- Buttons --- */
         .btn {
             display: inline-block;
@@ -875,8 +911,11 @@
     <!-- Pricing Section -->
     <section class="section-padding pricing-section" id="pricing">
         <div class="container">
-            <!-- New Title per request -->
-            <h2 class="text-center">השקעה בעצמך: בחרי את המסלול המתאים לך</h2>
+            <!-- New Premium Title Design -->
+            <div class="premium-header">
+                <span class="premium-header-main">השקעה בעצמך</span>
+                <span class="premium-header-sub">בחרי את המסלול המתאים לך</span>
+            </div>
             
             <div class="pricing-container">
                 <!-- Monthly Plan -->
