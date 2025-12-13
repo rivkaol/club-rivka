@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מועדון הפרימיום של רבקה הולצברג | בריאות שבאה מהטבע</title>
+    
+    <!-- Google Fonts: Rubik -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- Brand Variables --- */
+        :root {
+            --primary-green: #1B4D3E;
+            --accent-gold: #D4AF37;
+            --bg-cream: #F8F9FA;
+            --text-dark: #333333;
+            --white-glass: rgba(255, 255, 255, 0.95);
+            --border-radius: 16px;
+            --shadow-soft: 0 10px 30px rgba(27, 77, 62, 0.08);
+            --font-main: 'Rubik', sans-serif;
+        }
+
+        /* --- Global Reset & Typography --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            padding-top: 60px; /* Space for Sticky Nav */
+        }
+
+        h1, h2, h3, h4, h5 {
+            color: var(--primary-green);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+            font-size: 1.1rem;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a { text-decoration: none; }
+
+        /* --- Utilities --- */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .text-center { text-align: center; }
+        .text-gold { color: var(--accent-gold); }
+        .text-green { color: var(--primary-green); }
+        
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        /* --- Sticky Navigation --- */
+        .sticky-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            background: var(--white-glass);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-logo {
+            font-weight: 700;
+            color: var(--primary-green);
+            font-size: 1.1rem;
+        }
+
+        .nav-btn {
+            padding: 8px 20px;
+            font-size: 1rem;
+            border-radius: 20px;
+        }
+
+        /* --- Buttons --- */
+        .btn {
+            display: inline-block;
+            padding: 16px 32px;
+            font-size: 1.2rem;
+            font-weight: 500;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .btn-gold {
+            background-color: var(--accent-gold);
+            color: #fff;
+            border: 2px solid var(--accent-gold);
+        }
+
+        .btn-gold:hover {
+            background-color: #bfa030;
+            transform: translateY(-2px);
+        }
+
+        .btn-green {
+            background-color: var(--primary-green);
+            color: #fff;
+        }
+
+        .btn-green:hover {
+            background-color: #143d30;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary-green);
+            color: var(--primary-green);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            background: linear-gradient(135deg, rgba(27, 77, 62, 0.05) 0%, rgba(212, 175, 55, 0.1) 100%), url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTAwIDQwIEMgNTAgNDAgNTAgMTAwIDEwMCAxNjAgQyAxNTAgMTAwIDE1MCA0MCAxMDAgNDAgWiIgZmlsbD0iI2ZmZiIgZmlsbC1vcGFjaXR5PSIwLjMiLz48L3N2Zz4=');
+            padding: 60px 0 60px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-logo {
+            font-size: 1.2rem;
+            color: var(--accent-gold);
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        .hero-box {
+            background: var(--white-glass);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-soft);
+            max-width: 800px;
+            margin: 0 auto;
+            border-top: 4px solid var(--accent-gold);
+        }
+
+        /* --- Pain Points (The Problem) --- */
+        .pain-section {
+            background-color: #fff;
+        }
+
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .pain-card {
+            background: var(--bg-cream);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        .pain-card i {
+            font-size: 2rem;
+            color: var(--primary-green);
+            margin-bottom: 20px;
+        }
+
+        .quote-box {
+            font-style: italic;
+            border-right: 4px solid var(--accent-gold);
+            padding-right: 20px;
+            margin: 20px 0;
+            background: rgba(212, 175, 55, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        /* --- The Root Cause --- */
+        .cause-section {
+            background-color: var(--primary-green);
+            color: #fff;
+            text-align: center;
+        }
+
+        .cause-section h2 {
+            color: #fff;
+        }
+        
+        .cause-section p {
+            font-weight: 400;
+        }
+
+        .cause-list {
+            text-align: right;
+            max-width: 600px;
+            margin: 30px auto;
+        }
+        
+        .cause-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .cause-list li i {
+            color: var(--accent-gold);
+            margin-left: 15px;
+        }
+
+        /* --- Solution / Features --- */
+        .solution-section {
+            position: relative;
+        }
+        
+        /* Organic leaf background accent */
+        .leaf-bg {
+            position: absolute;
+            top: 50px;
+            left: -50px;
+            width: 200px;
+            height: 200px;
+            background: var(--accent-gold);
+            opacity: 0.1;
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .feature-item {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 60px;
+            background: var(--white-glass);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .feature-number {
+            font-size: 4rem;
+            font-weight: 700;
+            color: rgba(212, 175, 55, 0.3); /* Transparent Gold */
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .feature-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        /* --- What's Inside Grid --- */
+        .inside-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .inside-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            border: 1px solid #eee;
+            transition: 0.3s;
+        }
+
+        .inside-card:hover {
+            border-color: var(--accent-gold);
+            transform: translateY(-5px);
+        }
+
+        .inside-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .inside-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(27, 77, 62, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-green);
+            font-size: 1.2rem;
+            margin-left: 15px;
+        }
+
+        /* --- Audience --- */
+        .audience-section {
+            background-color: #fff;
+        }
+        
+        .target-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+        }
+
+        .target-col {
+            flex: 1;
+            min-width: 300px;
+            padding: 30px;
+            border-radius: var(--border-radius);
+        }
+
+        .target-yes {
+            background-color: rgba(27, 77, 62, 0.05);
+            border-top: 4px solid var(--primary-green);
+        }
+
+        .target-no {
+            background-color: rgba(0,0,0,0.02);
+            border-top: 4px solid #999;
+        }
+
+        .check-list li {
+            margin-bottom: 12px;
+            position: relative;
+            padding-right: 25px;
+        }
+
+        .check-list li::before {
+            content: '✓';
+            color: var(--primary-green);
+            position: absolute;
+            right: 0;
+            font-weight: bold;
+        }
+        
+        .x-list li {
+            margin-bottom: 12px;
+            position: relative;
+            padding-right: 25px;
+        }
+
+        .x-list li::before {
+            content: '✕';
+            color: #999;
+            position: absolute;
+            right: 0;
+            font-weight: bold;
+        }
+
+        /* --- Pricing --- */
+        .pricing-section {
+            background: linear-gradient(to bottom, var(--bg-cream), #e9ecef);
+        }
+
+        .pricing-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .price-card {
+            background: #fff;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: var(--shadow-soft);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* --- Improved Featured Card (Gradient & Pulse) --- */
+        .price-card.featured {
+            background: linear-gradient(to bottom, #fff, #fff9e6); /* Subtle gold tint at bottom */
+            border: 3px solid var(--accent-gold);
+            transform: scale(1.05);
+            z-index: 2;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+
+        .price-card.featured .btn-gold {
+            animation: pulse 2s infinite;
+        }
+        
+        .badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent-gold);
+            color: #fff;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        .price {
+            font-size: 3rem;
+            color: var(--primary-green);
+            font-weight: 700;
+            margin: 20px 0 5px;
+        }
+        
+        .price-sub {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .gift-box {
+            background: rgba(212, 175, 55, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
+
+        /* --- About --- */
+        .about-section {
+            background-color: #fff;
+        }
+
+        .about-grid {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .about-img {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+        }
+        
+        .about-img img {
+            border-radius: 50%;
+            border: 5px solid var(--accent-gold);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .about-content {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        /* --- FAQ / Objections Styling --- */
+        .faq-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        .faq-item {
+            background: #fff;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-soft);
+            text-align: right;
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            border-right: 4px solid var(--accent-gold);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item:hover {
+            transform: translateX(-5px);
+        }
+
+        .faq-icon {
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            background: rgba(27, 77, 62, 0.05);
+            color: var(--primary-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        /* --- Floating WhatsApp Button --- */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 20px;
+            left: 20px; /* Left side for RTL sites to avoid scrollbar conflict */
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #128c7e;
+            transform: scale(1.1);
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--primary-green);
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+            font-weight: 300;
+        }
+        
+        footer p {
+            margin-bottom: 0;
+            font-size: 0.9rem;
+        }
+
+        /* --- Mobile Responsive Improvements (UPDATED) --- */
+        @media (max-width: 768px) {
+            /* Reduced Padding */
+            .section-padding {
+                padding: 40px 0; 
+            }
+
+            /* Adjust Hero Heading */
+            .hero h1 {
+                font-size: 2rem; 
+                line-height: 1.2;
+            }
+            
+            .hero {
+                padding: 40px 0 40px; 
+            }
+
+            /* Better Readability */
+            p {
+                font-size: 1.15rem; 
+            }
+
+            /* Stack Elements */
+            .pricing-container, 
+            .about-grid, 
+            .faq-item {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .price-card.featured {
+                transform: scale(1);
+            }
+
+            /* Center Text in Mobile FAQ */
+            .faq-item {
+                text-align: center;
+                align-items: center; 
+                border-right: none;
+                border-top: 4px solid var(--accent-gold);
+            }
+            
+            .faq-icon {
+                margin-bottom: 10px;
+            }
+
+            /* Prevent Horizontal Scroll */
+            .pain-grid, .inside-grid {
+                grid-template-columns: 1fr; 
+            }
+
+            /* Full Width Buttons */
+            .btn {
+                width: 100%;
+                padding: 18px 0;
+            }
+            
+            /* Background Adjustments */
+            .leaf-bg {
+                width: 100px;
+                height: 100px;
+                left: -20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sticky Navigation -->
+    <nav class="sticky-nav">
+        <div class="nav-container">
+            <div class="nav-logo">בריאות שבאה מהטבע</div>
+            <a href="#pricing" class="btn-green nav-btn">הצטרפי עכשיו</a>
+        </div>
+    </nav>
+
+    <!-- Header / Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-logo">בריאות שבאה מהטבע</div>
+            <h1>מועדון הפרימיום של רבקה הולצברג</h1>
+            <p class="subtitle">בריאות • התפתחות • השראה <br> מסגרת שמחזיקה אותך כל השנה</p>
+            
+            <div class="hero-box">
+                <p style="font-size: 1.3rem; font-weight: 500;">
+                    "שוב התאכזבתי מעצמי. אני תמיד דואגת לכולם – חוץ ממני."
+                </p>
+                <p>
+                    אם זה נשמע לך מוכר – את לא לבד. 
+                    זה המקום שבו נשים אחרי גיל 50 מפסיקות להתאכזב מעצמן, ומתחילות להרגיש קלות וטובות.
+                </p>
+                <a href="#pricing" class="btn btn-gold">כן, אני רוצה להצטרף למועדון >></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Pain Points Section -->
+    <section class="section-padding pain-section" id="pain">
+        <div class="container">
+            <h2 class="text-center">אם את מכירה את הרגעים האלה...</h2>
+            <div class="pain-grid">
+                <div class="pain-card">
+                    <i class="fas fa-tshirt"></i>
+                    <h3>מול המראה</h3>
+                    <p>את מודדת עוד ועוד בגדים. שום דבר לא יושב כמו פעם. בסוף את מוצאת משהו "סביר", אבל בלב אומרת: "די, אני לא מוכנה להמשיך ככה".</p>
+                </div>
+                <div class="pain-card">
+                    <i class="fas fa-camera"></i>
+                    <h3>התמונה המשפחתית</h3>
+                    <p>כולם זורחים – ואת רואה רק דבר אחד: כמה את נראית עייפה, כבדה, "כבויה". המחשבה שעוברת לך בראש: "זאת אני? ככה אני באמת נראית?"</p>
+                </div>
+                <div class="pain-card">
+                    <i class="fas fa-user-md"></i>
+                    <h3>אצל הרופא</h3>
+                    <p>בדיקות דם לא משהו. קצת סוכר, קצת לחץ דם. הרופא אומר בעדינות "צריך שינוי", ואת מבינה שאם לא עכשיו - מתי?</p>
+                </div>
+            </div>
+            
+            <div class="quote-box text-center" style="max-width: 700px; margin: 40px auto;">
+                <strong>ובנוסף לכל זה – יש את השחיקה הרגשית.</strong><br>
+                ניסית דיאטות, ניסית "להיות חזקה", אבל כל פעם שנשברת הקול הפנימי חזר: "אני חלשה. אין לי אופי".
+            </div>
+        </div>
+    </section>
+
+    <!-- Root Cause Section -->
+    <section class="section-padding cause-section">
+        <div class="container">
+            <h2 style="color:#fff;"><i class="fas fa-hand-paper"></i> עצרי רגע. הבעיה היא לא את.</h2>
+            <p style="font-size: 1.2rem;">את לא נכשלת כי אין לך משמעת. את נכשלת כי המערכת שניסית עד היום שגויה.</p>
+            
+            <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 16px; margin-top: 30px;">
+                <p>הגוף והמוח שלנו לא בנויים לשינויים חדים:</p>
+                <ul class="cause-list" style="color: #fff;">
+                    <li><i class="fas fa-times-circle"></i> להחליף חצי תפריט ביום אחד</li>
+                    <li><i class="fas fa-times-circle"></i> להיכנס למשטר של "אסור, אסור, אסור"</li>
+                    <li><i class="fas fa-times-circle"></i> לנסות לעשות את זה לבד בלי תמיכה</li>
+                </ul>
+                <p>זה אולי עובד לשבועיים – ואז החיים מחזירים אותך לנקודת ההתחלה.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="section-padding solution-section" id="solution">
+        <div class="leaf-bg"></div>
+        <div class="container">
+            <h2 class="text-center">אז מה כן עובד? מסגרת קבועה שמחזיקה אותך</h2>
+            <p class="text-center">הבעיה היא לא שאין לך כוח רצון. הבעיה היא שניסית לעשות את זה לבד.</p>
+
+            <div style="margin-top: 50px;">
+                <div class="feature-item">
+                    <span class="feature-number">01</span>
+                    <div class="feature-content">
+                        <h3>ידע מעודכן כל חודש</h3>
+                        <p>לא עוד לקרוא 1,000 מאמרים סותרים. את מקבלת הדרכות ברורות ומעשיות פעמיים בחודש: אחת על בריאות טבעית, ואחת על התפתחות אישית ואמונה. הכל מוקלט וזמין לך תמיד.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <span class="feature-number">02</span>
+                    <div class="feature-content">
+                        <h3>מתכונים שעובדים בחיים אמיתיים</h3>
+                        <p>כל שבוע סרטון מתכון מפורט (שיעור מלא, לא ריל קצר). כל הטיפים, ההסברים והחלופות כדי שתוכלי להכין אוכל בריא גם כשיש חיים עמוסים ונכדים בבית.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <span class="feature-number">03</span>
+                    <div class="feature-content">
+                        <h3>קהילה שמבינה אותך</h3>
+                        <p>את לא לבד. יש כאן נשים שעוברות בדיוק את מה שאת עוברת. התמיכה הזו שווה זהב ומורידה חצי מהלחץ.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features / What's Inside -->
+    <section class="section-padding" style="background-color: var(--bg-cream);">
+        <div class="container">
+            <h2 class="text-center">מה מחכה לך בפנים?</h2>
+            
+            <div class="inside-grid">
+                <div class="inside-card">
+                    <div class="inside-header">
+                        <div class="inside-icon"><i class="fas fa-video"></i></div>
+                        <h3 style="margin:0; margin-right: 15px; font-size: 1.3rem;">24 וובינרים חיים בשנה</h3>
+                    </div>
+                    <p><strong>בריאות טבעית:</strong> תזונה, ניקוי רעלים, איזון הגוף.<br>
+                    <strong>התפתחות אישית:</strong> חיזוק כוח הרצון, עבודה עם מחשבות, אמונה.</p>
+                </div>
+
+                <div class="inside-card">
+                    <div class="inside-header">
+                        <div class="inside-icon"><i class="fas fa-utensils"></i></div>
+                        <h3 style="margin:0; margin-right: 15px; font-size: 1.3rem;">52 שיעורי מתכון מלאים</h3>
+                    </div>
+                    <p>2-4 סרטונים בחודש. מה אני מכינה, איך, כמה ולמה. כל הסודות מאחורי הקלעים למטבח בריא וטעים.</p>
+                </div>
+
+                <div class="inside-card">
+                    <div class="inside-header">
+                        <div class="inside-icon"><i class="fas fa-book-open"></i></div>
+                        <h3 style="margin:0; margin-right: 15px; font-size: 1.3rem;">חוברת מתכונים (במתנה!)</h3>
+                    </div>
+                    <p>לנרשמות למנוי שנתי: חוברת מודפסת של 80+ מתכונים עם שליח עד הבית + גרסה דיגיטלית.</p>
+                </div>
+
+                <div class="inside-card">
+                    <div class="inside-header">
+                        <div class="inside-icon"><i class="fas fa-users"></i></div>
+                        <h3 style="margin:0; margin-right: 15px; font-size: 1.3rem;">קהילה וליווי</h3>
+                    </div>
+                    <p>קבוצת וואטסאפ עם עדכונים, גישה לארכיון המלא, ותחושה של "אני לא לבד בדרך".</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Audience -->
+    <section class="section-padding audience-section" id="audience">
+        <div class="container">
+            <h2 class="text-center">למי זה מתאים?</h2>
+            <div class="target-box">
+                <div class="target-col target-yes">
+                    <h3 class="text-center"><i class="fas fa-check text-green"></i> מתאים במיוחד ל...</h3>
+                    <ul class="check-list">
+                        <li>נשים אחרי גיל 50 (וגם 60 ו-80!) שרוצות להרגיש חיות וחזקות.</li>
+                        <li>מי שרוצה תהליך הדרגתי ושפוי, לא דיאטות כאסח.</li>
+                        <li>מי שאוהבת ללמוד ולהבין *למה* דברים עובדים.</li>
+                        <li>מי שמוכנה להשקיע בעצמה שעה-שעתיים בחודש.</li>
+                        <li>למי שמחפשת גישה לעומק ותמיכה.</li>
+                    </ul>
+                </div>
+
+                <div class="target-col target-no">
+                    <h3 class="text-center" style="color: #666;"><i class="fas fa-times"></i> למי זה פחות מתאים?</h3>
+                    <ul class="x-list">
+                        <li>למי שמחפשת "טריק קסם" או פתרון אוטומטי.</li>
+                        <li>למי שלא מוכנה לפנות לעצמה רגעים בשבוע.</li>
+                        <li>למי שמצפה לשינוי בלי להשקיע בתהליך.</li>
+                        <li>למי שלא אוהבת למידה.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section-padding pricing-section" id="pricing">
+        <div class="container">
+            <h2 class="text-center">כמה זה "שווה" לך?</h2>
+            <p class="text-center">לפני שנדבר על מחיר - תחשבי על השקט הנפשי שלך, על הבריאות שלך ועל סוף הבלבול.</p>
+            
+            <div class="pricing-container">
+                <!-- Monthly Plan -->
+                <div class="price-card">
+                    <div>
+                        <h3>תשלום חודשי ללא התחייבות</h3>
+                        <div class="price">29 ₪</div>
+                        <p class="price-sub">לחודש הראשון בלבד</p>
+                        <ul class="check-list" style="text-align: right;">
+                            <li>ללא התחייבות</li>
+                            <li>גישה מלאה לתכנים</li>
+                            <li>התנסות בקהילה</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p style="font-size: 0.9rem; margin-top: 15px;">לאחר מכן 49 ₪/חודש</p>
+                        <a href="https://private.invoice4u.co.il/newsite/he/clearing/public/i4u-clearing?ProductGuid=6164e594-5dbf-42f0-919f-de27dae35618" class="btn btn-outline" style="width: 100%;" target="_blank">אני רוצה לנסות חודש</a>
+                    </div>
+                </div>
+
+                <!-- Annual Plan (Featured) -->
+                <div class="price-card featured">
+                    <div class="badge">הכי משתלם - המלצה חמה!</div>
+                    <div>
+                        <h3>מנוי שנתי VIP</h3>
+                        <div class="price">496 ₪</div>
+                        <p class="price-sub">לשנה שלמה (כ-41 ₪ לחודש)</p>
+                        <p style="font-size: 0.9rem;">(ניתן לחלק ל-4 תשלומים של 124 ₪)</p>
+                        
+                        <div class="gift-box">
+                            <i class="fas fa-gift text-gold"></i>
+                            <strong>מתנה בלעדית:</strong><br>
+                            ספר המתכונים המודפס עם שליח עד הבית!
+                        </div>
+
+                        <ul class="check-list" style="text-align: right;">
+                            <li>כל ההטבות והתכנים</li>
+                            <li>שקט נפשי לשנה שלמה</li>
+                            <li>חיסכון כספי</li>
+                        </ul>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <a href="https://private.invoice4u.co.il/newsite/he/clearing/public/i4u-clearing?ProductGuid=59c0ee8e-c08f-48c3-84db-c4d6ba87fb66" class="btn btn-gold" style="width: 100%;" target="_blank">כן, אני מצטרפת לשנה >></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Guarantee -->
+            <div style="max-width: 600px; margin: 40px auto; text-align: center; background: #fff; padding: 20px; border-radius: 16px;">
+                <h4 class="text-green"><i class="fas fa-shield-alt"></i> אחריות הוגנת ושקופה</h4>
+                <p style="margin-bottom: 0;">אם באמצע השנה תרגישי שזה לא מתאים, תקבלי החזר על החודשים שטרם נוצלו (בקיזוז עלות החוברת ודמי השימוש). פשוט והוגן.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section-padding about-section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-img">
+                    <!-- Placeholder for Rivka's Image -->
+                    <img src="https://placehold.co/400x400/F8F9FA/1B4D3E?text=Rivka+Holzberg" alt="רבקה הולצברג">
+                </div>
+                <div class="about-content">
+                    <h2>מי אני – רבקה הולצברג</h2>
+                    <p><strong>מאמנת לבריאות טבעית כבר 12 שנים.</strong></p>
+                    <p>לפני 12 שנים ירדתי מעל 30 ק"ג – אחרי ששיניתי את כל הרגלי הבריאות שלי. מאז, היתה בי תשוקה לעזור לנשים נוספות לעשות את השינוי הזה בעצמן.</p>
+                    <p>ליוויתי אלפי נשים לשפר ערכים, להוסיף הרגלים טובים, לרדת במשקל ולחיות מתוך בריאות ושמחה.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ / Objections - REDESIGNED -->
+    <section class="section-padding" style="background-color: var(--bg-cream);">
+        <div class="container">
+            <h2 class="text-center">"כן, אבל... זה לא בשבילי?"</h2>
+            <div class="faq-stack">
+                
+                <!-- Item 1 -->
+                <div class="faq-item">
+                    <div class="faq-icon"><i class="fas fa-clock"></i></div>
+                    <div>
+                        <h4>"אין לי זמן..."</h4>
+                        <p style="margin-bottom: 0;">
+                            ההדרכות מוקלטות – אפשר לצפות מתי שנוח.<br>
+                            סרטוני המתכונים בנויים קצר ומדויק.<br>
+                            מספיק שעה-שעתיים בחודש – כדי להצטרף לקצב.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="faq-item">
+                    <div class="faq-icon"><i class="fas fa-users-slash"></i></div>
+                    <div>
+                        <h4>"אני לא בן אדם של קבוצות..."</h4>
+                        <p style="margin-bottom: 0;">
+                            המועדון לא מחייב חשיפה אישית.<br>
+                            את יכולה רק לצפות בהדרכות, להשתמש במתכונים, ולהרגיש חלק – גם בלי לשתף כלום.<br>
+                            את בוחרת כמה להיות מעורבת.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="faq-item">
+                    <div class="faq-icon"><i class="fas fa-heart-broken"></i></div>
+                    <div>
+                        <h4>"כבר ניסיתי הכל, לי זה לא יעבוד..."</h4>
+                        <p style="margin-bottom: 0;">
+                            בדיוק בגלל זה המועדון לא בנוי על שינוי דרסטי.<br>
+                            את לא הולכת להפוך את החיים שלך ביום אחד.<br>
+                            את מצטרפת למסגרת שעוזרת לך לבנות הרגל אחד, ועוד אחד, ועוד אחד – עד שתסתכלי אחורה ותראי דרך שלמה.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section-padding text-center" style="background: var(--white-glass); border-top: 4px solid var(--accent-gold);">
+        <div class="container">
+            <h2>רגע לפני שאת סוגרת...</h2>
+            <p style="max-width: 700px; margin: 0 auto 30px;">
+                אם הגעת עד כאן, את מבינה שהשנה הבאה לא יכולה להיראות כמו הקודמת.
+                תתחילי קטן. תני לעצמך הזדמנות של חודש אחד ב-29 ₪.
+                אם תאהבי – נהדר. ואם לא? אין התחייבות.
+                <strong>אל תשלמי על חוסר החלטה.</strong>
+            </p>
+            <a href="https://private.invoice4u.co.il/newsite/he/clearing/public/i4u-clearing?ProductGuid=6164e594-5dbf-42f0-919f-de27dae35618" class="btn btn-gold btn-lg" target="_blank">כן, אני רוצה לנסות חודש ב-29 ₪ בלבד >></a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 בריאות שבאה מהטבע | מועדון הפרימיום של רבקה הולצברג</p>
+            <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 10px;">כל הזכויות שמורות</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/972500000000" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>
