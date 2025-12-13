@@ -112,9 +112,16 @@
         }
 
         .nav-logo {
-            font-weight: 700;
-            color: var(--primary-green);
-            font-size: 1.1rem;
+            /* font-weight: 700; removed text styling */
+            /* color: var(--primary-green); removed text styling */
+            /* font-size: 1.1rem; removed text styling */
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-logo img {
+            max-height: 50px; /* Adjust based on your actual logo */
+            width: auto;
         }
 
         .nav-btn {
@@ -173,12 +180,19 @@
         }
 
         .hero-logo {
-            font-size: 1.2rem;
-            color: var(--accent-gold);
-            letter-spacing: 2px;
+            /* font-size: 1.2rem; removed */
+            /* color: var(--accent-gold); removed */
+            /* letter-spacing: 2px; removed */
             margin-bottom: 20px;
-            font-weight: 700;
-            text-transform: uppercase;
+            /* font-weight: 700; removed */
+            /* text-transform: uppercase; removed */
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-logo img {
+            max-height: 80px; /* Bigger logo for hero */
+            width: auto;
         }
 
         .hero h1 {
@@ -186,11 +200,23 @@
             margin-bottom: 20px;
         }
 
+        /* Animated Subtitle Styling */
+        @keyframes floatUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
         .hero .subtitle {
-            font-size: 1.5rem;
-            color: var(--text-dark);
+            font-size: 1.6rem;
+            font-weight: 500;
             margin-bottom: 40px;
-            font-weight: 400;
+            background: linear-gradient(90deg, var(--primary-green), #bfa030);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: floatUp 1.2s ease-out forwards;
+            display: inline-block;
+            padding: 10px;
+            border-bottom: 2px solid rgba(212, 175, 55, 0.3); /* Subtle gold underline */
         }
 
         .hero-box {
@@ -665,7 +691,10 @@
     <!-- Sticky Navigation -->
     <nav class="sticky-nav">
         <div class="nav-container">
-            <div class="nav-logo">בריאות שבאה מהטבע</div>
+            <!-- Updated Logo Filename -->
+            <div class="nav-logo">
+                <img src="logo.jpg.png" alt="לוגו רבקה הולצברג"> 
+            </div>
             <a href="#pricing" class="btn-green nav-btn">הצטרפי עכשיו</a>
         </div>
     </nav>
@@ -673,7 +702,7 @@
     <!-- Header / Hero Section -->
     <header class="hero">
         <div class="container">
-            <div class="hero-logo">בריאות שבאה מהטבע</div>
+            <!-- Logo removed from here as requested -->
             <h1>מועדון הפרימיום של רבקה הולצברג</h1>
             <p class="subtitle">בריאות • התפתחות • השראה <br> מסגרת שמחזיקה אותך כל השנה</p>
             
@@ -714,7 +743,7 @@
             
             <div class="quote-box text-center" style="max-width: 700px; margin: 40px auto;">
                 <strong>ובנוסף לכל זה – יש את השחיקה הרגשית.</strong><br>
-                ניסית דיאטות, ניסית "להיות חזקה", אבל כל פעם שנשברת הקול הפנימי חזר: "אני חלשה. אין לי אופי".
+                ניסית שיטות נוקשות מכל הסוגים, ניסית "להיות חזקה", אבל כל פעם שנשברת הקול הפנימי חזר: "אני חלשה. אין לי אופי".
             </div>
         </div>
     </section>
@@ -823,7 +852,7 @@
                     <h3 class="text-center"><i class="fas fa-check text-green"></i> מתאים במיוחד ל...</h3>
                     <ul class="check-list">
                         <li>נשים אחרי גיל 50 (וגם 60 ו-80!) שרוצות להרגיש חיות וחזקות.</li>
-                        <li>מי שרוצה תהליך הדרגתי ושפוי, לא דיאטות כאסח.</li>
+                        <li>מי שרוצה תהליך הדרגתי ושפוי, לא שיטות קיצוניות.</li>
                         <li>מי שאוהבת ללמוד ולהבין *למה* דברים עובדים.</li>
                         <li>מי שמוכנה להשקיע בעצמה שעה-שעתיים בחודש.</li>
                         <li>למי שמחפשת גישה לעומק ותמיכה.</li>
@@ -846,8 +875,8 @@
     <!-- Pricing Section -->
     <section class="section-padding pricing-section" id="pricing">
         <div class="container">
-            <h2 class="text-center">כמה זה "שווה" לך?</h2>
-            <p class="text-center">לפני שנדבר על מחיר - תחשבי על השקט הנפשי שלך, על הבריאות שלך ועל סוף הבלבול.</p>
+            <!-- New Title per request -->
+            <h2 class="text-center">השקעה בעצמך: בחרי את המסלול המתאים לך</h2>
             
             <div class="pricing-container">
                 <!-- Monthly Plan -->
@@ -914,8 +943,8 @@
                 <div class="about-content">
                     <h2>מי אני – רבקה הולצברג</h2>
                     <p><strong>מאמנת לבריאות טבעית כבר 12 שנים.</strong></p>
-                    <p>לפני 12 שנים ירדתי מעל 30 ק"ג – אחרי ששיניתי את כל הרגלי הבריאות שלי. מאז, היתה בי תשוקה לעזור לנשים נוספות לעשות את השינוי הזה בעצמן.</p>
-                    <p>ליוויתי אלפי נשים לשפר ערכים, להוסיף הרגלים טובים, לרדת במשקל ולחיות מתוך בריאות ושמחה.</p>
+                    <p>לפני 12 שנים עשיתי שינוי מדהים באנרגיה ובחיוניות שלי – אחרי ששיניתי את כל הרגלי הבריאות שלי. מאז, היתה בי תשוקה לעזור לנשים נוספות לעשות את השינוי הזה בעצמן.</p>
+                    <p>ליוויתי אלפי נשים לשפר ערכים, להוסיף הרגלים טובים, להרגיש קלילות בגוף ולחיות מתוך בריאות ושמחה.</p>
                 </div>
             </div>
         </div>
@@ -986,13 +1015,13 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 בריאות שבאה מהטבע | מועדון הפרימיום של רבקה הולצברג</p>
+            <p>&copy; 2025 בריאות שבאה מהטבע | מועדון הפרימיום של רבקה הולצברג</p>
             <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 10px;">כל הזכויות שמורות</p>
         </div>
     </footer>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/972500000000" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/504207702?text=היי+רבקה+יש+לי+שאלה" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
