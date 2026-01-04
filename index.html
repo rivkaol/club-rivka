@@ -43,7 +43,7 @@
             color: var(--text-dark);
             line-height: 1.6;
             overflow-x: hidden;
-            padding-top: 60px; /* Space for Sticky Nav */
+            padding-top: 70px; /* Space for Sticky Nav */
         }
 
         h1, h2, h3, h4, h5 {
@@ -111,16 +111,8 @@
             padding: 0 20px;
         }
 
-        .nav-logo {
-            /* font-weight: 700; removed text styling */
-            /* color: var(--primary-green); removed text styling */
-            /* font-size: 1.1rem; removed text styling */
-            display: flex;
-            align-items: center;
-        }
-
         .nav-logo img {
-            max-height: 50px; /* Adjust based on your actual logo */
+            max-height: 50px;
             width: auto;
         }
 
@@ -128,6 +120,13 @@
             padding: 8px 20px;
             font-size: 1rem;
             border-radius: 20px;
+            color: #fff;
+            background-color: var(--primary-green);
+            transition: 0.3s;
+        }
+
+        .nav-btn:hover {
+            background-color: #143d30;
         }
 
         /* --- Premium Header Styling --- */
@@ -153,7 +152,6 @@
             padding: 0 10px;
         }
 
-        /* Decorative lines for premium feel */
         .premium-header-sub::before,
         .premium-header-sub::after {
             content: '';
@@ -178,6 +176,7 @@
             cursor: pointer;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             text-align: center;
+            border: none;
         }
 
         .btn-gold {
@@ -209,26 +208,10 @@
 
         /* --- Hero Section --- */
         .hero {
-            background: linear-gradient(135deg, rgba(27, 77, 62, 0.05) 0%, rgba(212, 175, 55, 0.1) 100%), url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTAwIDQwIEMgNTAgNDAgNTAgMTAwIDEwMCAxNjAgQyAxNTAgMTAwIDE1MCA0MCAxMDAgNDAgWiIgZmlsbD0iI2ZmZiIgZmlsbC1vcGFjaXR5PSIwLjMiLz48L3N2Zz4=');
+            background: linear-gradient(135deg, rgba(27, 77, 62, 0.05) 0%, rgba(212, 175, 55, 0.1) 100%);
             padding: 60px 0 60px;
             text-align: center;
             position: relative;
-        }
-
-        .hero-logo {
-            /* font-size: 1.2rem; removed */
-            /* color: var(--accent-gold); removed */
-            /* letter-spacing: 2px; removed */
-            margin-bottom: 20px;
-            /* font-weight: 700; removed */
-            /* text-transform: uppercase; removed */
-            display: flex;
-            justify-content: center;
-        }
-
-        .hero-logo img {
-            max-height: 80px; /* Bigger logo for hero */
-            width: auto;
         }
 
         .hero h1 {
@@ -236,7 +219,6 @@
             margin-bottom: 20px;
         }
 
-        /* Animated Subtitle Styling */
         @keyframes floatUp {
             0% { opacity: 0; transform: translateY(20px); }
             100% { opacity: 1; transform: translateY(0); }
@@ -252,7 +234,7 @@
             animation: floatUp 1.2s ease-out forwards;
             display: inline-block;
             padding: 10px;
-            border-bottom: 2px solid rgba(212, 175, 55, 0.3); /* Subtle gold underline */
+            border-bottom: 2px solid rgba(212, 175, 55, 0.3);
         }
 
         .hero-box {
@@ -265,10 +247,8 @@
             border-top: 4px solid var(--accent-gold);
         }
 
-        /* --- Pain Points (The Problem) --- */
-        .pain-section {
-            background-color: #fff;
-        }
+        /* --- Pain Points --- */
+        .pain-section { background-color: #fff; }
 
         .pain-grid {
             display: grid;
@@ -293,27 +273,20 @@
         .quote-box {
             font-style: italic;
             border-right: 4px solid var(--accent-gold);
-            padding-right: 20px;
+            padding: 20px;
             margin: 20px 0;
             background: rgba(212, 175, 55, 0.1);
-            padding: 20px;
             border-radius: 8px;
         }
 
-        /* --- The Root Cause --- */
+        /* --- Cause Section --- */
         .cause-section {
             background-color: var(--primary-green);
             color: #fff;
             text-align: center;
         }
 
-        .cause-section h2 {
-            color: #fff;
-        }
-        
-        .cause-section p {
-            font-weight: 400;
-        }
+        .cause-section h2 { color: #fff; }
 
         .cause-list {
             text-align: right;
@@ -332,12 +305,9 @@
             margin-left: 15px;
         }
 
-        /* --- Solution / Features --- */
-        .solution-section {
-            position: relative;
-        }
+        /* --- Solution Section --- */
+        .solution-section { position: relative; }
         
-        /* Organic leaf background accent */
         .leaf-bg {
             position: absolute;
             top: 50px;
@@ -363,14 +333,9 @@
         .feature-number {
             font-size: 4rem;
             font-weight: 700;
-            color: rgba(212, 175, 55, 0.3); /* Transparent Gold */
+            color: rgba(212, 175, 55, 0.3);
             line-height: 1;
             margin-bottom: 10px;
-        }
-
-        .feature-content h3 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
         }
 
         /* --- What's Inside Grid --- */
@@ -414,9 +379,7 @@
         }
 
         /* --- Audience --- */
-        .audience-section {
-            background-color: #fff;
-        }
+        .audience-section { background-color: #fff; }
         
         .target-box {
             display: flex;
@@ -497,9 +460,8 @@
             justify-content: space-between;
         }
 
-        /* --- Improved Featured Card (Gradient & Pulse) --- */
         .price-card.featured {
-            background: linear-gradient(to bottom, #fff, #fff9e6); /* Subtle gold tint at bottom */
+            background: linear-gradient(to bottom, #fff, #fff9e6);
             border: 3px solid var(--accent-gold);
             transform: scale(1.05);
             z-index: 2;
@@ -535,12 +497,6 @@
             margin: 20px 0 5px;
         }
         
-        .price-sub {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 20px;
-        }
-
         .gift-box {
             background: rgba(212, 175, 55, 0.1);
             padding: 15px;
@@ -550,9 +506,7 @@
         }
 
         /* --- About --- */
-        .about-section {
-            background-color: #fff;
-        }
+        .about-section { background-color: #fff; }
 
         .about-grid {
             display: flex;
@@ -564,7 +518,6 @@
         .about-img {
             flex: 1;
             min-width: 300px;
-            position: relative;
         }
         
         .about-img img {
@@ -578,7 +531,7 @@
             min-width: 300px;
         }
 
-        /* --- FAQ / Objections Styling --- */
+        /* --- FAQ --- */
         .faq-stack {
             display: flex;
             flex-direction: column;
@@ -600,10 +553,6 @@
             transition: transform 0.3s ease;
         }
 
-        .faq-item:hover {
-            transform: translateX(-5px);
-        }
-
         .faq-icon {
             flex-shrink: 0;
             width: 50px;
@@ -623,14 +572,14 @@
             width: 60px;
             height: 60px;
             bottom: 20px;
-            left: 20px; /* Left side for RTL sites to avoid scrollbar conflict */
+            left: 20px;
             background-color: #25d366;
             color: #FFF;
             border-radius: 50px;
             text-align: center;
             font-size: 30px;
             box-shadow: 2px 2px 3px #999;
-            z-index: 100;
+            z-index: 1000;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -642,83 +591,31 @@
             transform: scale(1.1);
         }
 
-        /* --- Footer --- */
-        footer {
-            background-color: var(--primary-green);
-            color: #fff;
-            padding: 40px 0;
+        /* --- NEW LEGAL FOOTER STYLING (For Script) --- */
+        #legal-footer-container {
+            padding: 40px 20px;
+            background-color: #fff;
+            border-top: 1px solid #eee;
             text-align: center;
-            font-weight: 300;
-        }
-        
-        footer p {
-            margin-bottom: 0;
-            font-size: 0.9rem;
+            color: #555; /* High contrast dark gray */
+            font-size: 0.95rem;
+            line-height: 1.5;
         }
 
-        /* --- Mobile Responsive Improvements (UPDATED) --- */
+        /* Force visibility for the script content */
+        #legal-footer-container * {
+            color: #333 !important; /* Ensure script links/text are dark */
+            font-family: var(--font-main) !important;
+        }
+
+        /* --- Mobile Responsive --- */
         @media (max-width: 768px) {
-            /* Reduced Padding */
-            .section-padding {
-                padding: 40px 0; 
-            }
-
-            /* Adjust Hero Heading */
-            .hero h1 {
-                font-size: 2rem; 
-                line-height: 1.2;
-            }
-            
-            .hero {
-                padding: 40px 0 40px; 
-            }
-
-            /* Better Readability */
-            p {
-                font-size: 1.15rem; 
-            }
-
-            /* Stack Elements */
-            .pricing-container, 
-            .about-grid, 
-            .faq-item {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .price-card.featured {
-                transform: scale(1);
-            }
-
-            /* Center Text in Mobile FAQ */
-            .faq-item {
-                text-align: center;
-                align-items: center; 
-                border-right: none;
-                border-top: 4px solid var(--accent-gold);
-            }
-            
-            .faq-icon {
-                margin-bottom: 10px;
-            }
-
-            /* Prevent Horizontal Scroll */
-            .pain-grid, .inside-grid {
-                grid-template-columns: 1fr; 
-            }
-
-            /* Full Width Buttons */
-            .btn {
-                width: 100%;
-                padding: 18px 0;
-            }
-            
-            /* Background Adjustments */
-            .leaf-bg {
-                width: 100px;
-                height: 100px;
-                left: -20px;
-            }
+            .section-padding { padding: 40px 0; }
+            .hero h1 { font-size: 2rem; }
+            .pricing-container, .about-grid, .faq-item { flex-direction: column; align-items: center; }
+            .price-card.featured { transform: scale(1); }
+            .faq-item { text-align: center; border-right: none; border-top: 4px solid var(--accent-gold); }
+            .btn { width: 100%; }
         }
     </style>
 </head>
@@ -727,18 +624,16 @@
     <!-- Sticky Navigation -->
     <nav class="sticky-nav">
         <div class="nav-container">
-            <!-- Updated Logo Filename -->
             <div class="nav-logo">
                 <img src="logo.jpg.png" alt="לוגו רבקה הולצברג"> 
             </div>
-            <a href="#pricing" class="btn-green nav-btn">הצטרפי עכשיו</a>
+            <a href="#pricing" class="nav-btn">הצטרפי עכשיו</a>
         </div>
     </nav>
 
     <!-- Header / Hero Section -->
     <header class="hero">
         <div class="container">
-            <!-- Logo removed from here as requested -->
             <h1>מועדון הפרימיום של רבקה הולצברג</h1>
             <p class="subtitle">בריאות • התפתחות • השראה <br> מסגרת שמחזיקה אותך כל השנה</p>
             
@@ -797,7 +692,6 @@
                     <li><i class="fas fa-times-circle"></i> להיכנס למשטר של "אסור, אסור, אסור"</li>
                     <li><i class="fas fa-times-circle"></i> לנסות לעשות את זה לבד בלי תמיכה</li>
                 </ul>
-                <p>זה אולי עובד לשבועיים – ואז החיים מחזירים אותך לנקודת ההתחלה.</p>
             </div>
         </div>
     </section>
@@ -807,14 +701,12 @@
         <div class="leaf-bg"></div>
         <div class="container">
             <h2 class="text-center">אז מה כן עובד? מסגרת קבועה שמחזיקה אותך</h2>
-            <p class="text-center">הבעיה היא לא שאין לך כוח רצון. הבעיה היא שניסית לעשות את זה לבד.</p>
-
             <div style="margin-top: 50px;">
                 <div class="feature-item">
                     <span class="feature-number">01</span>
                     <div class="feature-content">
                         <h3>ידע מעודכן כל חודש</h3>
-                        <p>לא עוד לקרוא 1,000 מאמרים סותרים. את מקבלת הדרכות ברורות ומעשיות פעמיים בחודש: אחת על בריאות טבעית, ואחת על התפתחות אישית ואמונה. הכל מוקלט וזמין לך תמיד.</p>
+                        <p>לא עוד לקרוא 1,000 מאמרים סותרים. את מקבלת הדרכות ברורות ומעשיות פעמיים בחודש. הכל מוקלט וזמין לך תמיד.</p>
                     </div>
                 </div>
 
@@ -822,7 +714,7 @@
                     <span class="feature-number">02</span>
                     <div class="feature-content">
                         <h3>מתכונים שעובדים בחיים אמיתיים</h3>
-                        <p>כל שבוע סרטון מתכון מפורט (שיעור מלא, לא ריל קצר). כל הטיפים, ההסברים והחלופות כדי שתוכלי להכין אוכל בריא גם כשיש חיים עמוסים ונכדים בבית.</p>
+                        <p>כל שבוע סרטון מתכון מפורט. כל הטיפים, ההסברים והחלופות כדי שתוכלי להכין אוכל בריא גם כשיש חיים עמוסים.</p>
                     </div>
                 </div>
 
@@ -837,88 +729,15 @@
         </div>
     </section>
 
-    <!-- Features / What's Inside -->
-    <section class="section-padding" style="background-color: var(--bg-cream);">
-        <div class="container">
-            <h2 class="text-center">מה מחכה לך בפנים?</h2>
-            
-            <div class="inside-grid">
-                <div class="inside-card">
-                    <div class="inside-header">
-                        <div class="inside-icon"><i class="fas fa-video"></i></div>
-                        <h3 style="margin:0; margin-right: 15px; font-size: 1.3rem;">24 וובינרים חיים בשנה</h3>
-                    </div>
-                    <p><strong>בריאות טבעית:</strong> תזונה, ניקוי רעלים, איזון הגוף.<br>
-                    <strong>התפתחות אישית:</strong> חיזוק כוח הרצון, עבודה עם מחשבות, אמונה.</p>
-                </div>
-
-                <div class="inside-card">
-                    <div class="inside-header">
-                        <div class="inside-icon"><i class="fas fa-utensils"></i></div>
-                        <h3 style="margin:0; margin-right: 15px; font-size: 1.3rem;">52 שיעורי מתכון מלאים</h3>
-                    </div>
-                    <p>2-4 סרטונים בחודש. מה אני מכינה, איך, כמה ולמה. כל הסודות מאחורי הקלעים למטבח בריא וטעים.</p>
-                </div>
-
-                <div class="inside-card">
-                    <div class="inside-header">
-                        <div class="inside-icon"><i class="fas fa-book-open"></i></div>
-                        <h3 style="margin:0; margin-right: 15px; font-size: 1.3rem;">חוברת מתכונים (במתנה!)</h3>
-                    </div>
-                    <p>לנרשמות למנוי שנתי: חוברת מודפסת של 80+ מתכונים עם שליח עד הבית + גרסה דיגיטלית.</p>
-                </div>
-
-                <div class="inside-card">
-                    <div class="inside-header">
-                        <div class="inside-icon"><i class="fas fa-users"></i></div>
-                        <h3 style="margin:0; margin-right: 15px; font-size: 1.3rem;">קהילה וליווי</h3>
-                    </div>
-                    <p>קבוצת וואטסאפ עם עדכונים, גישה לארכיון המלא, ותחושה של "אני לא לבד בדרך".</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Target Audience -->
-    <section class="section-padding audience-section" id="audience">
-        <div class="container">
-            <h2 class="text-center">למי זה מתאים?</h2>
-            <div class="target-box">
-                <div class="target-col target-yes">
-                    <h3 class="text-center"><i class="fas fa-check text-green"></i> מתאים במיוחד ל...</h3>
-                    <ul class="check-list">
-                        <li>נשים אחרי גיל 50 (וגם 60 ו-80!) שרוצות להרגיש חיות וחזקות.</li>
-                        <li>מי שרוצה תהליך הדרגתי ושפוי, לא שיטות קיצוניות.</li>
-                        <li>מי שאוהבת ללמוד ולהבין *למה* דברים עובדים.</li>
-                        <li>מי שמוכנה להשקיע בעצמה שעה-שעתיים בחודש.</li>
-                        <li>למי שמחפשת גישה לעומק ותמיכה.</li>
-                    </ul>
-                </div>
-
-                <div class="target-col target-no">
-                    <h3 class="text-center" style="color: #666;"><i class="fas fa-times"></i> למי זה פחות מתאים?</h3>
-                    <ul class="x-list">
-                        <li>למי שמחפשת "טריק קסם" או פתרון אוטומטי.</li>
-                        <li>למי שלא מוכנה לפנות לעצמה רגעים בשבוע.</li>
-                        <li>למי שמצפה לשינוי בלי להשקיע בתהליך.</li>
-                        <li>למי שלא אוהבת למידה.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Pricing Section -->
     <section class="section-padding pricing-section" id="pricing">
         <div class="container">
-            <!-- New Premium Title Design -->
             <div class="premium-header">
                 <span class="premium-header-main">השקעה בעצמך</span>
                 <span class="premium-header-sub">בחרי את המסלול המתאים לך</span>
             </div>
             
             <div class="pricing-container">
-                <!-- Monthly Plan -->
                 <div class="price-card">
                     <div>
                         <h3>תשלום חודשי ללא התחייבות</h3>
@@ -936,37 +755,22 @@
                     </div>
                 </div>
 
-                <!-- Annual Plan (Featured) -->
                 <div class="price-card featured">
                     <div class="badge">הכי משתלם - המלצה חמה!</div>
                     <div>
                         <h3>מנוי שנתי VIP</h3>
                         <div class="price">496 ₪</div>
                         <p class="price-sub">לשנה שלמה (כ-41 ₪ לחודש)</p>
-                        <p style="font-size: 0.9rem;">(ניתן לחלק ל-4 תשלומים של 124 ₪)</p>
-                        
                         <div class="gift-box">
                             <i class="fas fa-gift text-gold"></i>
                             <strong>מתנה בלעדית:</strong><br>
                             ספר המתכונים המודפס עם שליח עד הבית!
                         </div>
-
-                        <ul class="check-list" style="text-align: right;">
-                            <li>כל ההטבות והתכנים</li>
-                            <li>שקט נפשי לשנה שלמה</li>
-                            <li>חיסכון כספי</li>
-                        </ul>
                     </div>
                     <div style="margin-top: 20px;">
                         <a href="https://private.invoice4u.co.il/newsite/he/clearing/public/i4u-clearing?ProductGuid=59c0ee8e-c08f-48c3-84db-c4d6ba87fb66" class="btn btn-gold" style="width: 100%;" target="_blank">כן, אני מצטרפת לשנה >></a>
                     </div>
                 </div>
-            </div>
-
-            <!-- Guarantee -->
-            <div style="max-width: 600px; margin: 40px auto; text-align: center; background: #fff; padding: 20px; border-radius: 16px;">
-                <h4 class="text-green"><i class="fas fa-shield-alt"></i> אחריות הוגנת ושקופה</h4>
-                <p style="margin-bottom: 0;">אם באמצע השנה תרגישי שזה לא מתאים, תקבלי החזר על החודשים שטרם נוצלו (בקיזוז עלות החוברת ודמי השימוש). פשוט והוגן.</p>
             </div>
         </div>
     </section>
@@ -976,95 +780,38 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-img">
-                    <!-- Updated to link to local file profile.jpg.jpg -->
                     <img src="profile.jpg.jpg" alt="רבקה הולצברג">
                 </div>
                 <div class="about-content">
                     <h2>מי אני – רבקה הולצברג</h2>
                     <p><strong>מאמנת לבריאות טבעית כבר 12 שנים.</strong></p>
-                    <p>לפני 12 שנים עשיתי שינוי מדהים באנרגיה ובחיוניות שלי – אחרי ששיניתי את כל הרגלי הבריאות שלי. מאז, היתה בי תשוקה לעזור לנשים נוספות לעשות את השינוי הזה בעצמן.</p>
                     <p>ליוויתי אלפי נשים לשפר ערכים, להוסיף הרגלים טובים, להרגיש קלילות בגוף ולחיות מתוך בריאות ושמחה.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ / Objections - REDESIGNED -->
-    <section class="section-padding" style="background-color: var(--bg-cream);">
-        <div class="container">
-            <h2 class="text-center">"כן, אבל... זה לא בשבילי?"</h2>
-            <div class="faq-stack">
-                
-                <!-- Item 1 -->
-                <div class="faq-item">
-                    <div class="faq-icon"><i class="fas fa-clock"></i></div>
-                    <div>
-                        <h4>"אין לי זמן..."</h4>
-                        <p style="margin-bottom: 0;">
-                            ההדרכות מוקלטות – אפשר לצפות מתי שנוח.<br>
-                            סרטוני המתכונים בנויים קצר ומדויק.<br>
-                            מספיק שעה-שעתיים בחודש – כדי להצטרף לקצב.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Item 2 -->
-                <div class="faq-item">
-                    <div class="faq-icon"><i class="fas fa-users-slash"></i></div>
-                    <div>
-                        <h4>"אני לא בן אדם של קבוצות..."</h4>
-                        <p style="margin-bottom: 0;">
-                            המועדון לא מחייב חשיפה אישית.<br>
-                            את יכולה רק לצפות בהדרכות, להשתמש במתכונים, ולהרגיש חלק – גם בלי לשתף כלום.<br>
-                            את בוחרת כמה להיות מעורבת.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Item 3 -->
-                <div class="faq-item">
-                    <div class="faq-icon"><i class="fas fa-heart-broken"></i></div>
-                    <div>
-                        <h4>"כבר ניסיתי הכל, לי זה לא יעבוד..."</h4>
-                        <p style="margin-bottom: 0;">
-                            בדיוק בגלל זה המועדון לא בנוי על שינוי דרסטי.<br>
-                            את לא הולכת להפוך את החיים שלך ביום אחד.<br>
-                            את מצטרפת למסגרת שעוזרת לך לבנות הרגל אחד, ועוד אחד, ועוד אחד – עד שתסתכלי אחורה ותראי דרך שלמה.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
     <!-- Final CTA -->
-    <section class="section-padding text-center" style="background: var(--white-glass); border-top: 4px solid var(--accent-gold);">
+    <section class="section-padding text-center" style="background: #fff; border-top: 4px solid var(--accent-gold);">
         <div class="container">
             <h2>רגע לפני שאת סוגרת...</h2>
             <p style="max-width: 700px; margin: 0 auto 30px;">
-                אם הגעת עד כאן, את מבינה שהשנה הבאה לא יכולה להיראות כמו הקודמת.
-                תתחילי קטן. תני לעצמך הזדמנות של חודש אחד ב-29 ₪.
-                אם תאהבי – נהדר. ואם לא? אין התחייבות.
-                <strong>אל תשלמי על חוסר החלטה.</strong>
+                אל תשלמי על חוסר החלטה. תתחילי קטן. תני לעצמך הזדמנות של חודש אחד ב-29 ₪.
             </p>
-            <a href="https://private.invoice4u.co.il/newsite/he/clearing/public/i4u-clearing?ProductGuid=6164e594-5dbf-42f0-919f-de27dae35618" class="btn btn-gold btn-lg" target="_blank">כן, אני רוצה לנסות חודש ב-29 ₪ בלבד >></a>
+            <a href="https://private.invoice4u.co.il/newsite/he/clearing/public/i4u-clearing?ProductGuid=6164e594-5dbf-42f0-919f-de27dae35618" class="btn btn-gold" target="_blank">אני רוצה לנסות חודש ב-29 ₪ בלבד >></a>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 בריאות שבאה מהטבע | מועדון הפרימיום של רבקה הולצברג</p>
-            <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 10px;">כל הזכויות שמורות</p>
-        </div>
-    </footer>
+    <!-- LEGAL FOOTER CONTAINER (For the Script) -->
+    <div id="legal-footer-container">
+        <!-- הסקריפט יזריק כאן את התוכן המשפטי -->
+        <script src="https://rivkaol.github.io/legal-footer.js"></script>
+    </div>
 
     <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/504207702?text=היי+רבקה+יש+לי+שאלה" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
-<script src="https://rivkaol.github.io/legal-footer.js"></script>
+
 </body>
 </html>
-
-
