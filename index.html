@@ -21,7 +21,7 @@
             --accent-gold-gradient: linear-gradient(135deg, #FCE38A 0%, #D4AF37 50%, #997B09 100%);
             --bg-pearl: #F9FAFB;
             --text-main: #1B4D3E;
-            --text-secondary: #000000; /* Pure black for maximum contrast */
+            --text-secondary: #000000; 
             --earth-pink: #B07D62;
             --white-glass: rgba(255, 255, 255, 0.98);
             --border-radius: 24px;
@@ -53,7 +53,6 @@
             padding-top: 90px;
         }
 
-        /* Headings - Using Balance for elegant line breaks */
         h1, h2, h3, h4 {
             color: var(--text-main);
             font-weight: 800;
@@ -63,13 +62,12 @@
         }
 
         h1 { 
-            font-size: clamp(46px, 12vw, 80px); /* Massive and special */
+            font-size: clamp(40px, 12vw, 80px);
             margin-bottom: 1.5rem;
         }
         h2 { font-size: clamp(34px, 7vw, 50px); }
         h3 { font-size: clamp(28px, 6vw, 40px); }
 
-        /* Paragraphs - Using Pretty for elegant widow prevention */
         p {
             margin-bottom: 2.5rem;
             font-weight: 400;
@@ -77,7 +75,6 @@
             text-wrap: pretty;
         }
 
-        /* --- Container with Safe Margins --- */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -87,7 +84,7 @@
         .text-center { text-align: center; }
         
         .section-padding {
-            padding: 120px 0;
+            padding: 100px 0;
         }
 
         /* --- Sticky Navigation --- */
@@ -115,11 +112,15 @@
             padding: 0 25px;
         }
 
-        .nav-logo img { max-height: 70px; width: auto; }
+        .nav-logo img { 
+            max-height: 70px; 
+            width: auto; 
+            display: block;
+        }
 
         .nav-btn {
-            padding: 14px 36px;
-            font-size: 1.3rem;
+            padding: 14px 30px;
+            font-size: 1.2rem;
             font-weight: 700;
             border-radius: 50px;
             color: #fff;
@@ -128,13 +129,13 @@
             text-decoration: none;
         }
 
-        /* --- CTA Buttons - WHITE text as requested --- */
+        /* --- CTA Buttons --- */
         .btn-gold {
             display: flex;
             align-items: center;
             justify-content: center;
             min-height: 95px;
-            padding: 24px 65px;
+            padding: 24px 40px; /* Reduced side padding for better text wrap */
             font-size: 1.9rem;
             font-weight: 800;
             color: #ffffff; 
@@ -148,8 +149,8 @@
             width: fit-content;
             margin: 0 auto;
             text-decoration: none;
-            white-space: nowrap;
-            text-shadow: 0px 2px 4px rgba(0,0,0,0.2) !important;
+            text-shadow: 0px 2px 4px rgba(0,0,0,0.3) !important;
+            line-height: 1.2;
         }
 
         .btn-gold:hover {
@@ -169,13 +170,13 @@
         /* --- Hero Section --- */
         .hero {
             background: linear-gradient(180deg, rgba(212, 175, 55, 0.03) 0%, rgba(249, 250, 251, 1) 100%);
-            padding: 100px 0;
+            padding: 80px 0;
             text-align: center;
         }
 
         .hero .subtitle {
-            font-size: clamp(1.6rem, 4.5vw, 2.2rem); /* Reduced size to de-emphasize */
-            font-weight: 500; /* Medium weight - less emphasis than headline */
+            font-size: clamp(1.6rem, 4.5vw, 2.2rem);
+            font-weight: 500;
             color: var(--text-secondary);
             margin-bottom: 70px;
             display: inline-block;
@@ -230,7 +231,7 @@
         .solution-section {
             background: linear-gradient(135deg, #ffffff 0%, #fffdf2 50%, #ffffff 100%);
             position: relative;
-            padding: 140px 0;
+            padding: 120px 0;
         }
 
         .feature-item {
@@ -248,7 +249,8 @@
         .feature-number {
             font-size: 7rem;
             font-weight: 800;
-            color: rgba(212, 175, 55, 0.08);
+            color: var(--accent-gold); /* Much more visible color */
+            opacity: 0.4;
             line-height: 1;
             margin-bottom: 30px;
         }
@@ -264,24 +266,26 @@
             justify-content: center;
             gap: 60px; 
             flex-wrap: wrap;
-            margin-top: 80px;
+            margin-top: 100px; /* Added more space for badge */
         }
 
         .price-card {
             background: #fff;
-            padding: 90px 60px;
+            padding: 90px 40px;
             border-radius: 48px;
             width: 100%;
             max-width: 540px; 
             text-align: center;
             box-shadow: var(--shadow-premium);
             transition: 0.4s ease;
+            position: relative;
         }
 
         .price-card.featured {
             border: 5px solid var(--accent-gold);
             transform: scale(1.05);
             z-index: 2;
+            padding-top: 110px; /* Extra padding to avoid overlap with badge */
         }
 
         .price-tag {
@@ -306,7 +310,13 @@
                 margin-bottom: 2.8rem;
             }
             
-            h1 { font-size: 48px; line-height: 1.2; margin-bottom: 1rem; }
+            h1 { 
+                font-size: 40px !important; 
+                line-height: 1.2; 
+                margin-bottom: 1.5rem;
+                padding: 0 10px;
+            }
+            
             h2 { font-size: 38px; line-height: 1.3; }
             h3 { font-size: 32px; font-weight: 800; }
 
@@ -317,22 +327,33 @@
                 margin-bottom: 50px;
             }
 
-            .section-padding { padding: 80px 0; }
+            .section-padding { padding: 60px 0; }
             
-            .hero-box { padding: 60px 30px; border-radius: 36px; }
-            .feature-item { padding: 60px 30px; border-radius: 36px; }
-            .card-interactive { padding: 60px 30px; }
+            /* Logo Center in Mobile */
+            .nav-container {
+                justify-content: center;
+                padding: 0 15px;
+            }
+            .nav-btn { display: none; }
+            .nav-logo { margin: 0 auto; }
+            .nav-logo img { max-height: 60px; max-width: 100%; object-fit: contain; }
+
+            .hero-box { padding: 50px 20px; border-radius: 36px; }
+            .feature-item { padding: 50px 20px; border-radius: 36px; }
+            .card-interactive { padding: 50px 20px; }
             
-            .pricing-container { gap: 40px; }
-            .price-card { padding: 70px 25px; }
-            .price-card.featured { transform: scale(1); }
+            .pricing-container { gap: 60px; margin-top: 120px; }
+            .price-card { padding: 70px 20px; }
+            .price-card.featured { transform: scale(1); padding-top: 120px; }
             
             .btn-gold { 
                 width: 100% !important; 
-                font-size: 26px !important; 
+                font-size: 24px !important; 
                 font-weight: 800 !important; 
-                min-height: 110px; 
-                padding: 20px !important;
+                min-height: 100px; 
+                padding: 15px 20px !important;
+                white-space: normal; /* Allow text to wrap if necessary */
+                display: flex;
             }
             
             .cta-security-text, 
@@ -342,9 +363,9 @@
                 line-height: 1.6;
             }
 
-            .nav-container { padding: 0 25px; }
-            .nav-btn { display: none; }
-            .price-tag { font-size: 5.5rem; }
+            .price-tag { font-size: 5rem; }
+            
+            .feature-number { font-size: 5rem; margin-bottom: 15px; }
         }
 
         /* --- Floating WhatsApp --- */
@@ -473,7 +494,7 @@
                 </div>
 
                 <div class="price-card featured">
-                    <div style="background: var(--accent-gold-gradient); color: #ffffff; padding: 12px 40px; border-radius: 50px; font-size: 1.3rem; font-weight: 800; position: absolute; top: -30px; left: 50%; transform: translateX(-50%); box-shadow: 0 10px 25px rgba(153, 123, 9, 0.25); text-shadow: 0px 1px 2px rgba(0,0,0,0.3) !important;">המסלול המשתלם והמומלץ</div>
+                    <div style="background: var(--accent-gold-gradient); color: #ffffff; padding: 12px 40px; border-radius: 50px; font-size: 1.3rem; font-weight: 800; position: absolute; top: -30px; left: 50%; transform: translateX(-50%); box-shadow: 0 10px 25px rgba(153, 123, 9, 0.25); text-shadow: 0px 1px 2px rgba(0,0,0,0.3) !important; z-index: 10;">המסלול המשתלם והמומלץ</div>
                     <div>
                         <h3>מנוי שנתי VIP</h3>
                         <p>השקעה לשנה שלמה של בריאות</p>
@@ -521,7 +542,7 @@
     </section>
 
     <!-- Legal Footer -->
-    <div id="legal-footer-container">
+    <div id="legal-footer-container" style="padding: 60px 24px; background: #fff;">
         <script src="https://rivkaol.github.io/legal-footer.js"></script>
     </div>
 
